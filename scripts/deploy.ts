@@ -1,12 +1,12 @@
-import { ethers } from 'hardhat';
+import { ethers } from "hardhat";
 
 const main = async () => {
   try {
-    const nftContractFactory = await ethers.getContractFactory('FirstContract');
+    const nftContractFactory = await ethers.getContractFactory("FirstContract");
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
 
-    console.log('Contract deployed to:', nftContract.address);
+    console.log("Contract deployed to:", nftContract.address);
     process.exit(0);
   } catch (error) {
     console.log(error);
